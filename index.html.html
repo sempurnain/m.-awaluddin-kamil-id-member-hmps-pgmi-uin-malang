@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ID DIGITAL M. AWALUDDIN KAMIL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: #F9F8F3; 
+            color: #2D2424;
+            margin: 0; padding: 0;
+            overflow: hidden;
+        }
+
+        /* Full Screen Elegant Liquid Background */
+        .liquid-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; background: #F9F8F3;
+            overflow: hidden;
+        }
+
+        /* Animasi Blobs Maroon & Putih */
+        .blob {
+            position: absolute; border-radius: 50%; filter: blur(100px);
+            opacity: 0.25; animation: move 20s infinite alternate ease-in-out;
+        }
+        .blob-1 { width: 600px; height: 600px; background: #800000; top: -15%; left: -10%; }
+        .blob-2 { width: 500px; height: 500px; background: #FFFFFF; bottom: -10%; right: -5%; animation-delay: -5s; }
+        .blob-3 { width: 400px; height: 400px; background: #4a0404; top: 40%; left: 30%; animation-delay: -10s; }
+        
+        @keyframes move {
+            from { transform: translate(0, 0) scale(1) rotate(0deg); }
+            to { transform: translate(120px, 60px) scale(1.3) rotate(45deg); }
+        }
+
+        /* Liquid Glass Effect */
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 10px 32px rgba(128, 0, 0, 0.05);
+        }
+
+        /* Modern Navigation Button */
+        .glass-btn {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 18px;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #800000;
+        }
+        .glass-btn:active { transform: scale(0.95); background: rgba(128, 0, 0, 0.1); }
+
+        /* Centered Container */
+        .page-container {
+            width: 100%; height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 24px;
+        }
+
+        .page { 
+            display: none; 
+            width: 100%; 
+            max-width: 360px; 
+            flex-direction: column; 
+        }
+        .page-active { display: flex; animation: fadeIn 0.6s ease-out forwards; }
+        
+        #main-page { align-items: center; height: auto; }
+        #portfolio-page { height: 95vh; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .content-scroll { overflow-y: auto; flex-grow: 1; padding-bottom: 20px; }
+
+        /* Jarak 3cm (113px) */
+        .gap-3cm { margin-top: 113px; }
+
+        .skill-item {
+            display: flex; align-items: flex-start; gap: 8px;
+            margin-bottom: 6px; font-size: 10.5px; color: #374151;
+            line-height: 1.4;
+        }
+        .dot { width: 4px; height: 4px; background: #800000; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+
+        /* FIX: Instagram Story Ring (Hanya ring yang berubah warna, foto aman) */
+        .ig-story-container {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px auto;
+        }
+        .ig-story-ring {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            border-radius: 50%;
+            animation: rotateHue 4s linear infinite;
+        }
+        .ig-inner-white {
+            position: relative;
+            z-index: 2;
+            width: 84px;
+            height: 84px;
+            background: #F9F8F3; /* Sama dengan bg body */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Animasi dipisah agar tidak mengenai foto */
+        @keyframes rotateHue {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="liquid-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="page-container">
+        
+        <!-- ================= HALAMAN UTAMA (HOME) ================= -->
+        <div id="main-page" class="page page-active text-center">
+            <div class="mb-5 w-full">
+                <div class="inline-flex items-center gap-2 bg-white/60 px-2.5 py-0.5 rounded-full border border-maroon-100 mb-2 shadow-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#800000] animate-pulse"></span>
+                    <span class="text-[7px] font-bold tracking-[0.2em] text-[#800000] uppercase">id digital member of</span>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight text-[#2D2424] mb-0 uppercase">HMPS PGMI UIN MALANG</h1>
+                <p class="text-[8px] text-[#800000]/60 font-medium tracking-[0.2em] uppercase">Periode 2026</p>
+            </div>
+
+            <div class="space-y-3 px-2 w-full">
+                <a href="https://youtube.com/@hmpspgmiuinmalang7341" target="_blank" class="glass-btn h-11 shadow-sm">
+                    <i class="fab fa-youtube text-sm mr-3"></i>
+                    <span class="text-[10px] font-semibold tracking-wide">YOUTUBE OFFICIAL</span>
+                </a>
+                <a href="https://www.instagram.com/sahabatpgmiuinmlg" target="_blank" class="glass-btn h-11 shadow-sm">
+                    <i class="fab fa-instagram text-sm mr-3"></i>
+                    <span class="text-[10px] font-semibold tracking-wide">INSTAGRAM OFFICIAL</span>
+                </a>
+                <a href="https://www.tiktok.com/@sahabatpgmiuinmlg" target="_blank" class="glass-btn h-11 shadow-sm">
+                    <i class="fab fa-tiktok text-sm mr-3"></i>
+                    <span class="text-[10px] font-semibold tracking-wide">TIK TOK OFFICIAL</span>
+                </a>
+                <a href="https://hmpspgmiuinmalang.web.id/" target="_blank" class="glass-btn h-11 shadow-sm">
+                    <i class="fas fa-globe text-sm mr-3"></i>
+                    <span class="text-[10px] font-semibold tracking-wide">WEBSITE OFFICIAL</span>
+                </a>
+            </div>
+
+            <div class="gap-3cm px-2 w-full">
+                <button onclick="goToIdentity()" class="glass-btn w-full h-12 bg-[#800000] !text-white !border-none shadow-lg font-bold text-[9px] tracking-[0.2em] uppercase">
+                    Profil Identitas Diri
+                </button>
+                <p class="text-[7px] text-center mt-5 opacity-40 uppercase tracking-[0.4em] text-[#800000]">HMPS PGMI • 2024</p>
+            </div>
+        </div>
+
+        <!-- ================= IDENTITAS DIRI PAGE ================= -->
+        <div id="portfolio-page" class="page">
+            <div class="content-scroll px-1 scrollbar-hide pt-4">
+                
+                <!-- Profile Card (FIXED IMAGE COLORS) -->
+                <div class="liquid-glass rounded-[20px] p-4 mb-3 text-center">
+                    <div class="ig-story-container">
+                        <div class="ig-story-ring"></div>
+                        <div class="ig-inner-white">
+                            <img src="https://res.cloudinary.com/dr3evkwcu/image/upload/v1774692704/M._AWALUDIN_KAMIL_ezawsf.jpg    " 
+                                 alt="M. Awaluddin Kamil" 
+                                 class="w-[78px] h-[78px] rounded-full object-cover shadow-sm">
+                        </div>
+                    </div>
+                    <h2 class="text-sm font-bold text-black uppercase">M. AWALUDDIN KAMIL</h2>
+                    <p class="text-[8px] text-black font-bold tracking-widest uppercase leading-none mt-1">NIM 240103110166</p>
+                </div>
+
+                <!-- Info Box -->
+                <div class="liquid-glass rounded-[15px] p-3 mb-4 text-[9px] space-y-1.5">
+                    <div class="flex justify-between border-b border-black/5 pb-1">
+                        <span class="text-black font-bold">Instansi</span>
+                        <span class="text-right font-semibold text-black">UIN Maulana Malik Ibrahim</span>
+                    </div>
+                    <div class="flex justify-between border-b border-black/5 pb-1">
+                        <span class="text-black font-bold">Prodi</span>
+                        <span class="text-right font-semibold text-black">Pendidikan Guru Madrasah Ibtidaiyah</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-black font-bold">Fakultas</span>
+                        <span class="text-right font-semibold text-black">Ilmu Tarbiyah dan Keguruan</span>
+                    </div>
+                </div>
+
+                <!-- Tentang Saya -->
+                <div class="px-1 mb-4">
+                    <h3 class="text-[9px] font-bold text-black uppercase tracking-widest mb-1.5 border-l-2 border-[#800000] pl-2">Tentang Saya</h3>
+                    <p class="text-[9px] text-black leading-relaxed text-justify italic">
+                        Saya adalah mahasiswa Program Studi Pendidikan Guru Madrasah Ibtidaiyah (PGMI) di Fakultas Ilmu Tarbiyah dan Keguruan, UIN Maulana Malik Ibrahim Malang. Saya memiliki minat yang besar dalam bidang pendidikan dasar, khususnya dalam pengembangan metode dan media pembelajaran yang kreatif, inovatif, dan sesuai dengan karakteristik peserta didik di tingkat SD/MI. Selama menempuh pendidikan di perguruan tinggi, saya aktif mengembangkan kemampuan akademik, keterampilan teknologi pembelajaran, serta kemampuan bekerja sama dalam tim. Saya memiliki komitmen untuk terus belajar dan berkontribusi dalam meningkatkan kualitas pendidikan, terutama dalam menciptakan proses pembelajaran yang menarik, efektif, dan bermakna bagi siswa.
+                    </p>
+                </div>
+
+                <!-- Hard Skills -->
+                <div class="px-1 mb-4">
+                    <h3 class="text-[9px] font-bold text-black uppercase tracking-widest mb-1 border-l-2 border-[#800000] pl-2">Hard Skills</h3>
+                    <div class="space-y-0.5 mt-2 text-black">
+                        <div class="skill-item"><div class="dot"></div> Pengembangan media pembelajaran untuk siswa SD/MI</div>
+                        <div class="skill-item"><div class="dot"></div> Pembuatan materi pembelajaran digital (PowerPoint, Google Slides, Canva)</div>
+                        <div class="skill-item"><div class="dot"></div> Dasar pembuatan dan pengembangan website sederhana</div>
+                        <div class="skill-item"><div class="dot"></div> Penulisan karya ilmiah dan makalah akademik</div>
+                        <div class="skill-item"><div class="dot"></div> Penyusunan soal dan evaluasi pembelajaran SD/MI</div>
+                        <div class="skill-item"><div class="dot"></div> Kemampuan dasar seni (musik sederhana seperti pianika dan seni tari)</div>
+                        <div class="skill-item"><div class="dot"></div> Penggunaan aplikasi perkantoran (Microsoft Word, Google Docs, Excel)</div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="px-1 mb-4">
+                    <h3 class="text-[9px] font-bold text-black uppercase tracking-widest mb-1 border-l-2 border-[#800000] pl-2">Soft Skills</h3>
+                    <div class="space-y-0.5 mt-2 text-black">
+                        <div class="skill-item"><div class="dot"></div> Kemampuan komunikasi yang baik</div>
+                        <div class="skill-item"><div class="dot"></div> Kerja sama tim</div>
+                        <div class="skill-item"><div class="dot"></div> Manajemen waktu</div>
+                        <div class="skill-item"><div class="dot"></div> Kreativitas dalam pembelajaran</div>
+                        <div class="skill-item"><div class="dot"></div> Tanggung jawab dalam menyelesaikan tugas</div>
+                        <div class="skill-item"><div class="dot"></div> Kemampuan beradaptasi dengan lingkungan baru</div>
+                        <div class="skill-item"><div class="dot"></div> Berpikir kritis dalam memecahkan masalah</div>
+                        <div class="skill-item"><div class="dot"></div> Kepemimpinan dasar dalam kegiatan kelompok</div>
+                    </div>
+                </div>
+
+                <!-- Grid Sosial Media -->
+                <div class="grid grid-cols-2 gap-2 px-0.5 mb-5">
+                    <a href="https://www.instagram.com/sempurnain_aja?igsh=MTdyYzVoZWVnMWFi" target="_blank" class="glass-btn h-10 text-[8px] font-bold uppercase">
+                        <i class="fab fa-instagram mr-2"></i> IG
+                    </a>
+                    <a href="https://www.tiktok.com/@sempurnain_aja?_r=1&_t=ZS-94ZIuSLBi3c" target="_blank" class="glass-btn h-10 text-[8px] font-bold uppercase">
+                        <i class="fab fa-tiktok mr-2"></i> TikTok
+                    </a>
+                    <a href="https://wa.me/6282332920552" target="_blank" class="glass-btn h-10 text-[8px] font-bold uppercase">
+                        <i class="fab fa-whatsapp mr-2"></i> WA
+                    </a>
+                    <a href="mailto:kmilsempurna@gmail.com" class="glass-btn h-10 text-[8px] font-bold uppercase">
+                        <i class="fas fa-envelope mr-2"></i> Email
+                    </a>
+                </div>
+
+                <div class="text-center pb-4">
+                    <p class="text-[8px] text-black italic">Terima kasih telah berkunjung.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goToIdentity() {
+            document.getElementById('main-page').classList.remove('page-active');
+            document.getElementById('main-page').style.display = 'none';
+            document.getElementById('portfolio-page').style.display = 'flex';
+            document.getElementById('portfolio-page').classList.add('page-active');
+            history.pushState({page: 'identity'}, "Identity", "#identity");
+            window.scrollTo(0,0);
+        }
+
+        function showHome() {
+            document.getElementById('portfolio-page').classList.remove('page-active');
+            document.getElementById('portfolio-page').style.display = 'none';
+            document.getElementById('main-page').style.display = 'flex';
+            document.getElementById('main-page').classList.add('page-active');
+            window.scrollTo(0,0);
+        }
+
+        window.onpopstate = function(event) {
+            showHome();
+        };
+    </script>
+</body>
+</html>
