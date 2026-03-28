@@ -50,7 +50,7 @@
         .glass-btn {
             background: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.8);
             border-radius: 18px;
             transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
             display: flex;
@@ -98,7 +98,7 @@
         }
         .dot { width: 4px; height: 4px; background: #800000; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
 
-        /* FIX: Instagram Story Ring (Hanya ring yang berubah warna, foto aman) */
+        /* Instagram Story Ring Effect */
         .ig-story-container {
             position: relative;
             width: 90px;
@@ -120,13 +120,12 @@
             z-index: 2;
             width: 84px;
             height: 84px;
-            background: #F9F8F3; /* Sama dengan bg body */
+            background: #F9F8F3; 
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        /* Animasi dipisah agar tidak mengenai foto */
         @keyframes rotateHue {
             0% { filter: hue-rotate(0deg); }
             100% { filter: hue-rotate(360deg); }
@@ -185,21 +184,21 @@
         <div id="portfolio-page" class="page">
             <div class="content-scroll px-1 scrollbar-hide pt-4">
                 
-                <!-- Profile Card (FIXED IMAGE COLORS) -->
+                <!-- Profile Card -->
                 <div class="liquid-glass rounded-[20px] p-4 mb-3 text-center">
                     <div class="ig-story-container">
                         <div class="ig-story-ring"></div>
                         <div class="ig-inner-white">
-                            <img src="https://res.cloudinary.com/dr3evkwcu/image/upload/v1774692704/M._AWALUDIN_KAMIL_ezawsf.jpg    " 
+                            <img src="https://res.cloudinary.com/dr3evkwcu/image/upload/v1774692704/M._AWALUDIN_KAMIL_ezawsf.jpg" 
                                  alt="M. Awaluddin Kamil" 
                                  class="w-[78px] h-[78px] rounded-full object-cover shadow-sm">
                         </div>
                     </div>
                     <h2 class="text-sm font-bold text-black uppercase">M. AWALUDDIN KAMIL</h2>
-                    <p class="text-[8px] text-black font-bold tracking-widest uppercase leading-none mt-1">NIM 240103110166</p>
+                    <p class="text-[8px] text-black font-bold tracking-widest uppercase leading-none mt-1">ANGGOTA DIVISI MULTIMEDIA</p>
                 </div>
 
-                <!-- Info Box -->
+                <!-- Info Box (Instansi, Prodi, Fakultas) -->
                 <div class="liquid-glass rounded-[15px] p-3 mb-4 text-[9px] space-y-1.5">
                     <div class="flex justify-between border-b border-black/5 pb-1">
                         <span class="text-black font-bold">Instansi</span>
@@ -215,16 +214,16 @@
                     </div>
                 </div>
 
-                <!-- Tentang Saya -->
-                <div class="px-1 mb-4">
+                <!-- Tentang Saya (With Frame) -->
+                <div class="liquid-glass rounded-[15px] p-3 mb-4">
                     <h3 class="text-[9px] font-bold text-black uppercase tracking-widest mb-1.5 border-l-2 border-[#800000] pl-2">Tentang Saya</h3>
                     <p class="text-[9px] text-black leading-relaxed text-justify italic">
                         Saya adalah mahasiswa Program Studi Pendidikan Guru Madrasah Ibtidaiyah (PGMI) di Fakultas Ilmu Tarbiyah dan Keguruan, UIN Maulana Malik Ibrahim Malang. Saya memiliki minat yang besar dalam bidang pendidikan dasar, khususnya dalam pengembangan metode dan media pembelajaran yang kreatif, inovatif, dan sesuai dengan karakteristik peserta didik di tingkat SD/MI. Selama menempuh pendidikan di perguruan tinggi, saya aktif mengembangkan kemampuan akademik, keterampilan teknologi pembelajaran, serta kemampuan bekerja sama dalam tim. Saya memiliki komitmen untuk terus belajar dan berkontribusi dalam meningkatkan kualitas pendidikan, terutama dalam menciptakan proses pembelajaran yang menarik, efektif, dan bermakna bagi siswa.
                     </p>
                 </div>
 
-                <!-- Hard Skills -->
-                <div class="px-1 mb-4">
+                <!-- Hard Skills (With Frame) -->
+                <div class="liquid-glass rounded-[15px] p-3 mb-4">
                     <h3 class="text-[9px] font-bold text-black uppercase tracking-widest mb-1 border-l-2 border-[#800000] pl-2">Hard Skills</h3>
                     <div class="space-y-0.5 mt-2 text-black">
                         <div class="skill-item"><div class="dot"></div> Pengembangan media pembelajaran untuk siswa SD/MI</div>
@@ -237,8 +236,8 @@
                     </div>
                 </div>
 
-                <!-- Soft Skills -->
-                <div class="px-1 mb-4">
+                <!-- Soft Skills (With Frame) -->
+                <div class="liquid-glass rounded-[15px] p-3 mb-4">
                     <h3 class="text-[9px] font-bold text-black uppercase tracking-widest mb-1 border-l-2 border-[#800000] pl-2">Soft Skills</h3>
                     <div class="space-y-0.5 mt-2 text-black">
                         <div class="skill-item"><div class="dot"></div> Kemampuan komunikasi yang baik</div>
